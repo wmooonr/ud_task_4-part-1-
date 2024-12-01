@@ -4,7 +4,7 @@ import json
 router = APIRouter()
 
 @router.get("/get")
-def search_cve(query: str = Query(...)):
+def get_info(query: str = Query(...)):
     return get_cve_by_query(query)
 
 def get_cve_by_query(query: str):
