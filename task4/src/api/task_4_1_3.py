@@ -4,10 +4,10 @@ import json
 router = APIRouter()
 
 @router.get("/newest_cve")
-def get_new_cve():
-    return get_new_cve_list()
+def get_info():
+    return get_new_cve()
 
-def get_new_cve_list():
+def get_new_cve():
     with open(r"C:\Users\Anastasiia\homework_python\task4\src\api\known_exploited_vulnerabilities.json") as file:
         data = json.load(file)
 
